@@ -1,0 +1,100 @@
+/* ============================================================
+   style.css — Community Service Tracker styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:   #2d6a4f;
+  --green-lt:#52b788;
+  --cream:   #f8f4ec;
+  --dark:    #1a1a2e;
+  --mid:     #555;
+  --border:  #ddd;
+  --radius:  10px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  padding: 30px 16px 60px;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--green);
+  border-bottom: 2px solid var(--green-lt);
+  padding-bottom: 6px;
+}
+
+.container { max-width: 640px; margin: auto; }
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  margin: 12px 0 4px;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: .95rem;
+  font-family: inherit;
+  transition: border-color .2s;
+}
+
+input:focus { outline: none; border-color: var(--green-lt); }
+
+button {
+  margin-top: 18px;
+  padding: 10px 22px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: .95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+button:hover { background: var(--green-lt); }
+
+.message { margin-top: 12px; font-size: .9rem; min-height: 1.2em; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .9rem; }
+th { background: var(--green); color: #fff; padding: 8px 10px; text-align: left; }
+td { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #f6faf8; }
+
+.hidden { display: none; }
