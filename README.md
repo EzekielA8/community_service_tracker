@@ -21,3 +21,5 @@ a. [Quick Start Guide](https://nam10.safelinks.protection.outlook.com/?url=https
 3. Create a web service
 
 a. [Quick Start Guide](https://render.com/docs/deploy-node-express-app)
+
+NOTE: Be sure to use Free Tier otherwise you will be asked for a credit card!
