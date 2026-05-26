@@ -14,7 +14,7 @@
 
 const db = require('../db');
 
-// COMMENT FOR getAllRecords:
+// COMMENT FOR getAllRecords: This selects the comminity service records and orders them by the activity rate then returns the data by rows
 const getAllRecords = async () => {
   const res = await db.query(
     'SELECT * FROM service_records ORDER BY activity_date DESC'
@@ -22,7 +22,7 @@ const getAllRecords = async () => {
   return res.rows;
 };
 
-// COMMENT FOR addRecord:
+// COMMENT FOR addRecord: This record takes in and adds students data like name and id and add values of how many community hours were done, returning the new data added
 const addRecord = async (student_name, student_id, activity_date, hours, recipient) => {
   const res = await db.query(
     `INSERT INTO service_records
@@ -34,7 +34,7 @@ const addRecord = async (student_name, student_id, activity_date, hours, recipie
   return res.rows[0];
 };
 
-// COMMENT FOR getHoursByStudent:
+// COMMENT FOR getHoursByStudent: This selects a student and their data from the service records and groups the student name and id by ascending order
 const getHoursByStudent = async () => {
   const res = await db.query(
     `SELECT student_name, student_id, SUM(hours) AS total_hours
